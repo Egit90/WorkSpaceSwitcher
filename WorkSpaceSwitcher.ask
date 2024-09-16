@@ -1,0 +1,16 @@
+^t::
+{
+    static desktop := 1  ; Tracks current desktop (1 or 2)
+    if (desktop = 1)
+    {
+        Send "{LWin down}{LCtrl down}{Right down}"
+        Send "{LWin up}{LCtrl up}{Right up}"
+        desktop := 2
+    }
+    else
+    {
+        Send "{LWin down}{LCtrl down}{Left down}"
+        Send "{LWin up}{LCtrl up}{Left up}"
+        desktop := 1
+    }
+}
